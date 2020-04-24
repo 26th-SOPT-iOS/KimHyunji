@@ -1,6 +1,6 @@
 # KimHyunji💘
 
-[GitHub에 iOS 프로젝트를 올리기 전에 꼭❗️ 해야하는 설정]()
+[GitHub에 iOS 프로젝트를 올리기 전에 꼭❗️ 해야하는 설정](https://github.com/26th-SOPT-iOS/KimHyunji/blob/master/Github_README.md)
 
 ## navigation 활용 화면이동
 
