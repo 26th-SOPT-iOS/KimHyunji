@@ -6,7 +6,7 @@
 
 ### Navigation을 활용한 화면 이동
 
-자세한 내용 README
+[자세한 내용 README](https://github.com/26th-SOPT-iOS/KimHyunji/blob/master/1st_Navigation.md)
 
 * 실행 화면
   
