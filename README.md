@@ -35,7 +35,8 @@ navigation은 stack처럼 뷰가 계속 쌓이는 것. (대표적인 예는 아�
 
 ### 로그인 화면 구현
 
-[자세한 내용 README]()
+[자세한 내용 README](https://github.com/26th-SOPT-iOS/KimHyunji/blob/master/1st_LoginView.md)
+
 
 ![1차_로그인뷰](https://user-images.githubusercontent.com/49138331/80957629-83e28b00-8e3e-11ea-8aec-6758df8d62fe.gif)
 
