@@ -45,4 +45,7 @@ navigation은 stack처럼 뷰가 계속 쌓이는 것. (대표적인 예는 아�
 
 ### Zeplin & 도전과제 애니메이션
 
-자세한 내용 README
+[자세한 내용 README](https://github.com/26th-SOPT-iOS/KimHyunji/blob/master/2nd_Zeplin%26Animation.md)
+
+![2차 제플린 도전과제](https://user-images.githubusercontent.com/49138331/80961767-98c31c80-8e46-11ea-9c3e-b02a4a69655e.gif)
+
