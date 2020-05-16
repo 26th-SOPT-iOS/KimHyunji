@@ -62,13 +62,8 @@
 		5213425C2455CBEE00F4E880 /* 26th_Sopt */ = {
 			isa = PBXGroup;
 			children = (
-				521342752456AAEA00F4E880 /* Extensions */,
-				521342732455CCB800F4E880 /* ViewControllers */,
-				5213425D2455CBEE00F4E880 /* AppDelegate.swift */,
-				5213425F2455CBEE00F4E880 /* SceneDelegate.swift */,
-				521342632455CBEE00F4E880 /* Main.storyboard */,
-				521342662455CBF200F4E880 /* Assets.xcassets */,
-				521342682455CBF200F4E880 /* LaunchScreen.storyboard */,
+				52191F26246FB10800036416 /* Sources */,
+				52191F24246FB0ED00036416 /* Resources */,
 				5213426B2455CBF200F4E880 /* Info.plist */,
 			);
 			path = 26th_Sopt;
@@ -90,6 +85,35 @@
 				5213427C2456B28F00F4E880 /* UIView+Extension.swift */,
 			);
 			path = Extensions;
+			sourceTree = "<group>";
+		};
+		52191F24246FB0ED00036416 /* Resources */ = {
+			isa = PBXGroup;
+			children = (
+				52191F25246FB0FC00036416 /* Storyboards */,
+				521342662455CBF200F4E880 /* Assets.xcassets */,
+			);
+			path = Resources;
+			sourceTree = "<group>";
+		};
+		52191F25246FB0FC00036416 /* Storyboards */ = {
+			isa = PBXGroup;
+			children = (
+				521342632455CBEE00F4E880 /* Main.storyboard */,
+				521342682455CBF200F4E880 /* LaunchScreen.storyboard */,
+			);
+			path = Storyboards;
+			sourceTree = "<group>";
+		};
+		52191F26246FB10800036416 /* Sources */ = {
+			isa = PBXGroup;
+			children = (
+				521342752456AAEA00F4E880 /* Extensions */,
+				521342732455CCB800F4E880 /* ViewControllers */,
+				5213425D2455CBEE00F4E880 /* AppDelegate.swift */,
+				5213425F2455CBEE00F4E880 /* SceneDelegate.swift */,
+			);
+			path = Sources;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
