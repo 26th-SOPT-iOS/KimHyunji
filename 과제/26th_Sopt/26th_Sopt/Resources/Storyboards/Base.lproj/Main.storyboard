@@ -60,6 +60,7 @@
                                     <color key="titleColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                 </state>
                                 <connections>
+                                    <action selector="doLogin:" destination="BYZ-38-t0r" eventType="touchUpInside" id="Ocd-LZ-Qcn"/>
                                     <segue destination="tLK-aJ-3RG" kind="modal" modalPresentationStyle="fullScreen" id="zfs-LJ-uZS"/>
                                 </connections>
                             </button>
@@ -78,7 +79,7 @@
                                             <fragment content="회원가입 하기">
                                                 <attributes>
                                                     <color key="NSColor" red="0.39215686274509803" green="0.39215686274509803" blue="0.39215686274509803" alpha="1" colorSpace="calibratedRGB"/>
-                                                    <font key="NSFont" metaFont="system" size="15"/>
+                                                    <font key="NSFont" metaFont="label" size="15"/>
                                                     <paragraphStyle key="NSParagraphStyle" alignment="natural" lineBreakMode="wordWrapping" baseWritingDirection="natural" tighteningFactorForTruncation="0.0"/>
                                                     <integer key="NSUnderline" value="1"/>
                                                 </attributes>
@@ -133,8 +134,10 @@
                     </view>
                     <navigationItem key="navigationItem" id="hKK-Pd-PqB"/>
                     <connections>
+                        <outlet property="emailTextField" destination="J08-PL-QFb" id="RzV-Fb-xI9"/>
                         <outlet property="emailView" destination="umc-yq-ANY" id="TGj-mR-J5p"/>
                         <outlet property="loginButton" destination="yq7-bD-9Tj" id="egW-56-0wJ"/>
+                        <outlet property="passwordTextField" destination="TA3-GQ-ejk" id="e9u-ye-kNo"/>
                         <outlet property="passwordView" destination="DqX-lI-HVw" id="fnu-NN-UvU"/>
                         <outlet property="signUpLabel" destination="vcR-VZ-UIK" id="qT2-Ww-Lj0"/>
                     </connections>

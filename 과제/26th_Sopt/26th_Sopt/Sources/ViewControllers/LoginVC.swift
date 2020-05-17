@@ -14,6 +14,8 @@ class LoginVC: UIViewController {
     @IBOutlet var passwordView: UIView!
     @IBOutlet var loginButton: UIButton!
     @IBOutlet var signUpLabel: UILabel!
+    @IBOutlet var emailTextField: UITextField!
+    @IBOutlet var passwordTextField: UITextField!
     
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -29,5 +31,18 @@ class LoginVC: UIViewController {
         self.navigationController?.pushViewController(signUpVC, animated: true)
     }
     
-
+    @IBAction func doLogin(_ sender: Any) {
+        guard let inputID = emailTextField.text else { return }
+        guard let inputPW = passwordTextField.text else { return }
+        
+//        LoginService.shared.login(id: inputID, pwd: inputPW) { networkResult in
+//            switch networkResult{
+//            case .success(let token):
+//                guard let token = token as? String else { return }
+//                UserDefaults.standard.set(token, forKey: "token")
+//                guard let tabbarController = self.storyboard?.instantiateViewController(identifier: "") else { return <#return value#> }
+//            }
+//        }
+    }
+    
 }
