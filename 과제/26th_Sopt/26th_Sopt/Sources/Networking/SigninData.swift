@@ -8,11 +8,11 @@
 
 import Foundation
 
-struct SigninData: Codable {
+struct SigninData<T: Codable>: Codable {
     var status: Int
     var success: Bool
     var message: String
-    var data: TokenData?
+    var data: T?
     
     enum CodingKeys: String, CodingKey {
         case status = "status"
@@ -26,7 +26,7 @@ struct SigninData: Codable {
         status = (try? values.decode(Int.self, forKey: .status)) ?? -1
         success = (try? values.decode(Bool.self, forKey: .success)) ?? false
         message = (try? values.decode(String.self, forKey: .message)) ?? ""
-        data = (try? values.decode(TokenData.self, forKey: .data)) ?? nil
+        data = (try? values.decode(T.self, forKey: .data)) ?? nil
     }
 }
 

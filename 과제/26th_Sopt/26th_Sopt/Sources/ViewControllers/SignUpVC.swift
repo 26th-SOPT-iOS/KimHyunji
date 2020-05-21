@@ -15,6 +15,8 @@ class SignUpVC: UIViewController {
     @IBOutlet var passwordView: UIView!
     @IBOutlet var loginButton: UIButton!
     
+    var service: LoginServiceProtocol!
+    
     override func viewDidLoad() {
         super.viewDidLoad()
         customNavigationBar()
@@ -33,7 +35,25 @@ class SignUpVC: UIViewController {
         self.navigationController?.navigationBar.shadowImage = UIImage()
     }
     
-
-    
-
+    @IBAction func signUpClick(_ sender: Any) {
+        guard let service = service else {
+            return
+        }
+        let form = SignupData(id: "hyunjiiiiii", pw: "pw", name: "hyunjiiiiii", email: "email", phone: "phone")
+        service.requestSignUp(data: form) { result in
+            switch result {
+            case .success(let httpCode):
+                switch httpCode {
+                case .existId:
+                    print("이미존재")
+                case .success:
+                    print("성공")
+                default:
+                    print("no~~")
+                }
+            default:
+                print("err")
+            }
+        }
+    }
 }

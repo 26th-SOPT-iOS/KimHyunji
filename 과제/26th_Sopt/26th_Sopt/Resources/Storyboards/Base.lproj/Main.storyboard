@@ -61,7 +61,6 @@
                                 </state>
                                 <connections>
                                     <action selector="doLogin:" destination="BYZ-38-t0r" eventType="touchUpInside" id="Ocd-LZ-Qcn"/>
-                                    <segue destination="tLK-aJ-3RG" kind="modal" modalPresentationStyle="fullScreen" id="zfs-LJ-uZS"/>
                                 </connections>
                             </button>
                             <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="yAP-BP-cN3">
@@ -79,7 +78,7 @@
                                             <fragment content="회원가입 하기">
                                                 <attributes>
                                                     <color key="NSColor" red="0.39215686274509803" green="0.39215686274509803" blue="0.39215686274509803" alpha="1" colorSpace="calibratedRGB"/>
-                                                    <font key="NSFont" metaFont="label" size="15"/>
+                                                    <font key="NSFont" metaFont="system" size="15"/>
                                                     <paragraphStyle key="NSParagraphStyle" alignment="natural" lineBreakMode="wordWrapping" baseWritingDirection="natural" tighteningFactorForTruncation="0.0"/>
                                                     <integer key="NSUnderline" value="1"/>
                                                 </attributes>
@@ -222,6 +221,7 @@
                                     <color key="titleColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                 </state>
                                 <connections>
+                                    <action selector="signUpClick:" destination="ryL-gA-q5e" eventType="touchUpInside" id="FkM-Hx-EOQ"/>
                                     <segue destination="tLK-aJ-3RG" kind="modal" modalPresentationStyle="fullScreen" id="dhM-1M-KDw"/>
                                 </connections>
                             </button>
@@ -265,7 +265,7 @@
             </objects>
             <point key="canvasLocation" x="1454" y="55"/>
         </scene>
-        <!--ListVC-->
+        <!--홈-->
         <scene sceneID="Z6M-EP-3L2">
             <objects>
                 <viewController storyboardIdentifier="ListVC" id="tLK-aJ-3RG" customClass="ListVC" customModule="_6th_Sopt" customModuleProvider="target" sceneMemberID="viewController">
@@ -365,6 +365,14 @@
                                                     <constraint firstAttribute="height" constant="210" id="0ec-eJ-DIJ"/>
                                                 </constraints>
                                             </imageView>
+                                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="U7z-Pb-RRX">
+                                                <rect key="frame" x="384" y="52" width="22" height="22"/>
+                                                <constraints>
+                                                    <constraint firstAttribute="height" constant="22" id="LoU-LW-jyR"/>
+                                                    <constraint firstAttribute="width" constant="22" id="e9L-OC-xml"/>
+                                                </constraints>
+                                                <state key="normal" image="idcheckRedIc"/>
+                                            </button>
                                         </subviews>
                                         <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
                                         <constraints>
@@ -374,6 +382,8 @@
                                             <constraint firstItem="Btu-EP-L5O" firstAttribute="leading" secondItem="UDb-Dh-daA" secondAttribute="leading" id="Yyt-n5-IIi"/>
                                             <constraint firstItem="Btu-EP-L5O" firstAttribute="top" secondItem="UDb-Dh-daA" secondAttribute="top" constant="210" id="hOI-0K-Sfl"/>
                                             <constraint firstAttribute="bottom" secondItem="Btu-EP-L5O" secondAttribute="bottom" id="l1b-qi-N7g"/>
+                                            <constraint firstItem="PgK-kF-Dqn" firstAttribute="top" secondItem="U7z-Pb-RRX" secondAttribute="bottom" constant="-74" id="rBX-Gz-uUf"/>
+                                            <constraint firstItem="U7z-Pb-RRX" firstAttribute="leading" secondItem="PgK-kF-Dqn" secondAttribute="trailing" constant="-30" id="s0X-nC-Zkc"/>
                                         </constraints>
                                     </view>
                                 </subviews>
@@ -396,6 +406,7 @@
                         </constraints>
                         <viewLayoutGuide key="safeArea" id="WgE-ky-OCv"/>
                     </view>
+                    <tabBarItem key="tabBarItem" title="홈" image="house" catalog="system" selectedImage="house.fill" id="bIV-g5-ElJ"/>
                     <navigationItem key="navigationItem" id="eSA-9X-042"/>
                     <connections>
                         <outlet property="contentView" destination="Btu-EP-L5O" id="iCM-wR-gui"/>
@@ -414,7 +425,33 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="oCA-dJ-uQv" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="2342" y="55"/>
+            <point key="canvasLocation" x="3250.7246376811595" y="54.910714285714285"/>
+        </scene>
+        <!--친구-->
+        <scene sceneID="BEG-W9-Kaf">
+            <objects>
+                <viewController id="Ndi-Eh-fhK" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="7vs-o8-3Kh">
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="rrw-xC-ZhY">
+                                <rect key="frame" x="192" y="413.5" width="30" height="30"/>
+                                <state key="normal" title="쉿"/>
+                            </button>
+                        </subviews>
+                        <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
+                        <constraints>
+                            <constraint firstItem="rrw-xC-ZhY" firstAttribute="centerY" secondItem="3Md-gS-xuZ" secondAttribute="centerY" id="AhI-y4-WJa"/>
+                            <constraint firstItem="rrw-xC-ZhY" firstAttribute="centerX" secondItem="3Md-gS-xuZ" secondAttribute="centerX" id="EIn-QL-cSd"/>
+                        </constraints>
+                        <viewLayoutGuide key="safeArea" id="3Md-gS-xuZ"/>
+                    </view>
+                    <tabBarItem key="tabBarItem" title="친구" image="person" catalog="system" selectedImage="person.fill" id="1rQ-nx-LbR"/>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="GcK-gS-dH5" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="4105.7971014492759" y="54.910714285714285"/>
         </scene>
         <!--Navigation Controller-->
         <scene sceneID="762-xf-B5v">
@@ -433,9 +470,27 @@
             </objects>
             <point key="canvasLocation" x="-262.31884057971018" y="54.910714285714285"/>
         </scene>
+        <!--Tab Bar Controller-->
+        <scene sceneID="RZk-im-74y">
+            <objects>
+                <tabBarController automaticallyAdjustsScrollViewInsets="NO" id="bEa-hO-aHH" sceneMemberID="viewController">
+                    <toolbarItems/>
+                    <tabBar key="tabBar" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" id="c0W-uI-fiC">
+                        <autoresizingMask key="autoresizingMask"/>
+                        <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                    </tabBar>
+                    <connections>
+                        <segue destination="tLK-aJ-3RG" kind="relationship" relationship="viewControllers" id="dmS-tV-4OL"/>
+                        <segue destination="Ndi-Eh-fhK" kind="relationship" relationship="viewControllers" id="6Cj-As-Fec"/>
+                    </connections>
+                </tabBarController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="KnH-pH-nsN" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="2340.5797101449275" y="54.910714285714285"/>
+        </scene>
     </scenes>
     <inferredMetricsTieBreakers>
-        <segue reference="zfs-LJ-uZS"/>
+        <segue reference="dhM-1M-KDw"/>
     </inferredMetricsTieBreakers>
     <resources>
         <image name="9188465425230637911275922235726328076697600N" width="148" height="198"/>
@@ -444,7 +499,12 @@
         <image name="9229480325230625777943802058411231781322752N" width="148" height="198"/>
         <image name="9235840225230627344610312982063520952090624N" width="148" height="198"/>
         <image name="9298934625230618844611168856475911587889152N" width="148" height="198"/>
+        <image name="house" catalog="system" width="128" height="110"/>
+        <image name="house.fill" catalog="system" width="128" height="106"/>
+        <image name="idcheckRedIc" width="22" height="22"/>
         <image name="oursoptBgImg" width="375" height="210"/>
+        <image name="person" catalog="system" width="128" height="117"/>
+        <image name="person.fill" catalog="system" width="128" height="120"/>
         <image name="soptLogo" width="203" height="68"/>
     </resources>
 </document>

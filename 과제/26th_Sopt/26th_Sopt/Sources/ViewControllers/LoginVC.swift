@@ -17,6 +17,8 @@ class LoginVC: UIViewController {
     @IBOutlet var emailTextField: UITextField!
     @IBOutlet var passwordTextField: UITextField!
     
+    let service: LoginServiceProtocol = LoginService()
+    
     override func viewDidLoad() {
         super.viewDidLoad()
 
@@ -27,7 +29,7 @@ class LoginVC: UIViewController {
     
     @IBAction func signUpAction(_ sender: UIButton) {
         guard let signUpVC = self.storyboard?.instantiateViewController(withIdentifier: "SignUpVC") as? SignUpVC else { return }
-        
+        signUpVC.service = service
         self.navigationController?.pushViewController(signUpVC, animated: true)
     }
     
