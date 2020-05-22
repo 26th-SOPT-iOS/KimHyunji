@@ -10,20 +10,24 @@ import UIKit
 
 class SignUpVC: UIViewController {
 
-    @IBOutlet var nameView: UIView!
-    @IBOutlet var emailView: UIView!
-    @IBOutlet var passwordView: UIView!
     @IBOutlet var loginButton: UIButton!
+    @IBOutlet var roundViews: [UIView]!
+    @IBOutlet var nameTF: UITextField!
+    @IBOutlet var emailTF: UITextField!
+    @IBOutlet var idTF: UITextField!
+    @IBOutlet var phoneTF: UITextField!
+    @IBOutlet var pwTF: UITextField!
     
-    var service: LoginServiceProtocol!
+    var service: LoginServiceProtocol?
     
     override func viewDidLoad() {
         super.viewDidLoad()
         customNavigationBar()
 
-        nameView.layer.cornerRadius = nameView.frame.height / 2
-        emailView.layer.cornerRadius = emailView.frame.height / 2
-        passwordView.layer.cornerRadius = passwordView.frame.height / 2
+        for view in roundViews {
+            view.layer.cornerRadius = view.frame.height / 2
+        }
+        
         loginButton.layer.cornerRadius = loginButton.frame.height / 2
     }
     
@@ -36,11 +40,22 @@ class SignUpVC: UIViewController {
     }
     
     @IBAction func signUpClick(_ sender: Any) {
-        guard let service = service else {
-            return
-        }
-        let form = SignupData(id: "hyunjiiiiii", pw: "pw", name: "hyunjiiiiii", email: "email", phone: "phone")
-        service.requestSignUp(data: form) { result in
+        
+        let idValue = self.idTF.text
+        let pwValue = self.pwTF.text
+        let nameValue = self.nameTF.text
+        let emailValue = self.emailTF.text
+        let phoneValue = self.phoneTF.text
+        
+        service = LoginService()
+        
+//        guard let service = service else {
+//            print("왜")
+//            return
+//        }
+        
+        let form = SignupData(id: idValue, pw: pwValue, name: nameValue, email: emailValue, phone: phoneValue)
+        service?.requestSignUp(data: form) { result in
             switch result {
             case .success(let httpCode):
                 switch httpCode {

@@ -17,6 +17,7 @@
 		5213427B2456B16C00F4E880 /* SignUpVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5213427A2456B16C00F4E880 /* SignUpVC.swift */; };
 		5213427D2456B28F00F4E880 /* UIView+Extension.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5213427C2456B28F00F4E880 /* UIView+Extension.swift */; };
 		5213427F2456C18300F4E880 /* ListVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5213427E2456C18300F4E880 /* ListVC.swift */; };
+		52433806247701D9005AF391 /* LoginData.swift in Sources */ = {isa = PBXBuildFile; fileRef = 52433805247701D9005AF391 /* LoginData.swift */; };
 		52D279DF2473D39200E94443 /* SignupData.swift in Sources */ = {isa = PBXBuildFile; fileRef = 52D279DE2473D39200E94443 /* SignupData.swift */; };
 		52D279E52473FBC800E94443 /* LoginServiceProtocol.swift in Sources */ = {isa = PBXBuildFile; fileRef = 52D279E42473FBC800E94443 /* LoginServiceProtocol.swift */; };
 		52D279E72475532B00E94443 /* HTTPStatus.swift in Sources */ = {isa = PBXBuildFile; fileRef = 52D279E62475532B00E94443 /* HTTPStatus.swift */; };
@@ -39,6 +40,7 @@
 		5213427A2456B16C00F4E880 /* SignUpVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SignUpVC.swift; sourceTree = "<group>"; };
 		5213427C2456B28F00F4E880 /* UIView+Extension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UIView+Extension.swift"; sourceTree = "<group>"; };
 		5213427E2456C18300F4E880 /* ListVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ListVC.swift; sourceTree = "<group>"; };
+		52433805247701D9005AF391 /* LoginData.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoginData.swift; sourceTree = "<group>"; };
 		52D279DE2473D39200E94443 /* SignupData.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SignupData.swift; sourceTree = "<group>"; };
 		52D279E42473FBC800E94443 /* LoginServiceProtocol.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoginServiceProtocol.swift; sourceTree = "<group>"; };
 		52D279E62475532B00E94443 /* HTTPStatus.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HTTPStatus.swift; sourceTree = "<group>"; };
@@ -148,6 +150,7 @@
 				52FCA463246FBCAC00920C64 /* LoginService.swift */,
 				52D279DE2473D39200E94443 /* SignupData.swift */,
 				52D279E42473FBC800E94443 /* LoginServiceProtocol.swift */,
+				52433805247701D9005AF391 /* LoginData.swift */,
 			);
 			path = Networking;
 			sourceTree = "<group>";
@@ -293,6 +296,7 @@
 				52FCA460246FB88B00920C64 /* SigninData.swift in Sources */,
 				52D279DF2473D39200E94443 /* SignupData.swift in Sources */,
 				52D279E72475532B00E94443 /* HTTPStatus.swift in Sources */,
+				52433806247701D9005AF391 /* LoginData.swift in Sources */,
 				52FCA464246FBCAC00920C64 /* LoginService.swift in Sources */,
 				5213427B2456B16C00F4E880 /* SignUpVC.swift in Sources */,
 				52D279E52473FBC800E94443 /* LoginServiceProtocol.swift in Sources */,

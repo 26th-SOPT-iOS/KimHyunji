@@ -41,7 +41,6 @@ class LoginService: LoginServiceProtocol {
         URLSession.shared.dataTask(with: request) { (data, response, error) in
             print("response")
             if error != nil {
-                print(error)
                 completion(.networkFail)
                 return
             }
@@ -54,7 +53,7 @@ class LoginService: LoginServiceProtocol {
             
             let decoder = JSONDecoder()
             
-            guard let model = try? decoder.decode(SigninData<TokenData>.self, from: data),
+            guard let model = try? decoder.decode(LoginData<TokenData>.self, from: data),
                 let httpCode = HTTPStatus(rawValue: model.status) else {
                     print("http,decode err")
                     completion(.networkFail)
@@ -65,4 +64,59 @@ class LoginService: LoginServiceProtocol {
             
         }.resume()
     }
+    
+    func requestSignIn(data: SigninData, completion: @escaping (NetworkResult<HTTPStatus>) -> Void) {
+
+        guard let url: URL = URL(string: APIConstants.signinURL) else { return }
+
+        var request: URLRequest = URLRequest(url: url)
+
+        let headers = [
+            "Content-Type": "application/json"
+        ]
+
+        for (key, value) in headers {
+            request.setValue(value, forHTTPHeaderField: key)
+        }
+
+        let body = [
+            "id": data.id,
+            "password": data.pw
+        ]
+
+        guard let encodeData = try? JSONSerialization.data(withJSONObject: body) else {
+            return
+        }
+
+        request.httpBody = encodeData
+        request.httpMethod = "POST"
+
+        URLSession.shared.dataTask(with: request) { (data, response, error) in
+            print("response")
+            
+            if error != nil {
+                completion(.networkFail)
+                return
+            }
+
+            guard let data = data else {
+                print("data err")
+                completion(.networkFail)
+                return
+            }
+
+            let decoder = JSONDecoder()
+
+            guard let model = try? decoder.decode(LoginData<TokenData>.self, from: data),
+                let httpCode = HTTPStatus(rawValue: model.status) else {
+                    print("http,decode err")
+                    completion(.networkFail)
+                    return
+            }
+
+            completion(.success(httpCode))
+
+        }.resume()
+    }
+
 }

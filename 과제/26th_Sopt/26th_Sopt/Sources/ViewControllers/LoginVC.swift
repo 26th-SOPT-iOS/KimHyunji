@@ -17,7 +17,7 @@ class LoginVC: UIViewController {
     @IBOutlet var emailTextField: UITextField!
     @IBOutlet var passwordTextField: UITextField!
     
-    let service: LoginServiceProtocol = LoginService()
+    var service: LoginServiceProtocol?
     
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -37,14 +37,35 @@ class LoginVC: UIViewController {
         guard let inputID = emailTextField.text else { return }
         guard let inputPW = passwordTextField.text else { return }
         
-//        LoginService.shared.login(id: inputID, pwd: inputPW) { networkResult in
-//            switch networkResult{
-//            case .success(let token):
-//                guard let token = token as? String else { return }
-//                UserDefaults.standard.set(token, forKey: "token")
-//                guard let tabbarController = self.storyboard?.instantiateViewController(identifier: "") else { return <#return value#> }
-//            }
+        print(inputID, inputPW)
+        
+        service = LoginService()
+        
+//
+//        guard let service = service else {
+//            print("왜")
+//            return
 //        }
+        
+        let form = SigninData(id: inputID, pw: inputPW)
+        service?.requestSignIn(data: form) { result in
+            print("request가 들어오긴 하니?")
+            
+            switch result {
+            case .success(let httpCode):
+                switch httpCode {
+                case .existId:
+                    print("이미존재")
+                case .success:
+                    print("성공")
+                default:
+                    print("no~~")
+                }
+            default:
+                print("err")
+            }
+        }
+        
     }
     
 }

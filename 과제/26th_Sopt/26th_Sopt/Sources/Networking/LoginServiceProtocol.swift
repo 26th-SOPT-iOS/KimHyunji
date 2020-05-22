@@ -10,4 +10,5 @@ import Foundation
 
 protocol LoginServiceProtocol {
     func requestSignUp(data: SignupData, completion: @escaping (NetworkResult<HTTPStatus>) -> Void)
+    func requestSignIn(data: SigninData, completion: @escaping (NetworkResult<HTTPStatus>) -> Void)
 }
